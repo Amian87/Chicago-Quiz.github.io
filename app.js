@@ -33,7 +33,7 @@ var quiz = [
 var correctAnswerCount = 0;
 var questionList = 0;
 
-$(document).ready(function(){
+$(document).ready(function(){ 
 	$('.questionMain').hide();
 	$('.result').hide();
 	$('.congrats').hide();
@@ -52,14 +52,14 @@ $(document).ready(function(){
 	// submit answer
 	$('.answerForm').submit(function(event){
 		event.preventDefault();
-		finalAnswer = quiz[questionList].answer[quiz[questionList].correctAnswer];
+		finalAnswer = quiz[questionList].answers[quiz[questionList].correctAnswer];
 		finalAnswerValue=parseInt(($('input[name="answer"]:checked').val()));
 
-		if (finalAnswer === quiz[questionList].correctAnswer) {
+		if (finalAnswerValue === quiz[questionList].correctAnswer) {
 			correctAnswerCount++;
-			$('score').html("Score:" + " " + correctAnswer + " " + 'of' + " " + quiz.length);
+			$('.score').html("Score:" + " " + correctAnswerCount + " " + 'of' + " " + quiz.length);
 
-		} else
+		} else {
 
 			$('.answerList').append(quiz[questionList].question+'<br>'+finalAnswer+'<br>'+'<br>');
             $('.score').html("Score:"+" "+correctAnswerCount+" "+'of'+ " "+quiz.length);
