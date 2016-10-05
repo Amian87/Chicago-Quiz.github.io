@@ -1,0 +1,12 @@
+ul {
+	list-style: none;
+}
+
+body {
+	background-image: url('../chicago.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 1000px;
+	font-family: 'Oxygen', sans-serif;
+	color: black;
+	font-size: 20px;
+}
