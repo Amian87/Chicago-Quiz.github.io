@@ -10,3 +10,11 @@ body {
 	color: black;
 	font-size: 20px;
 }
+
+button {
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: none;
+	padding: 12px ;
+	border: 1px ;
+}
