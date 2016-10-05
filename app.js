@@ -44,16 +44,20 @@ $(document).ready(function(){
 
 	$('.start').click(function(){
 		$(this).remove();
-		$('.questionMain').show()
+		$('.questionMain').show();
+		$('.result').show();
+		runQuiz();
+	});
 
-
-
+	// submit answer
+	$('.answerForm').submit(function(event){
+		event.preventDefault();
+		finalAnswer = quiz[questionList].answer
 
 
 
 
 	});
-
 
 
 
